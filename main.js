@@ -11,7 +11,7 @@ const data = [
     {
         id: 2,
         title: 'Filtre à huile',
-        price: 80,
+        price: 800,
         type: 'expense'
     }
 ]
@@ -37,14 +37,18 @@ function createWindow(viewName,viewData=null,width =1400,height = 1000) {
     .then(() => {
          win.send('init-data',viewData);
     });
+
+    // only in dev mode 
+    win.webContents.openDevTools();
 }
 
+
 app.whenReady().then(() => {
-    createWindow();
+    createWindow('home', data);
 
     app.on('activate', () => {
         if (BrowserWindow.getAllWindows().length === 0) {
-            createWindow();
+            createWindow('home', data);
         }
     })
 });
@@ -54,3 +58,4 @@ app.on('window-all-closed', () => {
         app.quit();
     }
 })
+ 

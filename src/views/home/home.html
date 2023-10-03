@@ -38,16 +38,7 @@
                     <th scope="col">Actions</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Achat huile moteur</td>
-                    <td>80 €</td>
-                    <td>
-                        <button class="btn btn-outline-warning mx-2">Modif.</button>
-                        <button class="btn btn-outline-danger mx-2">Suppr.</button>
-                    </td>
-                </tr>
+                <tbody id="expense">
                 </tbody>
             </table>
 
@@ -65,16 +56,7 @@
                     <th scope="col">Actions</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Vidange voiture</td>
-                    <td>150 €</td>
-                    <td>
-                        <button class="btn btn-outline-warning mx-2">Modif.</button>
-                        <button class="btn btn-outline-danger mx-2">Suppr.</button>
-                    </td>
-                </tr>
+                <tbody id="income">
                 </tbody>
             </table>
 
@@ -86,11 +68,11 @@
     <div class="row">
         <div class="col-4 mx-auto card shadow text-center py-3">
             <h5>BILAN FINANCIER <i class="fas fa-receipt"></i></h5>
-            <div class="bg-success text-white">+ 70€</div>
+            <div id="balance" class="text-white"></div>
         </div>
     </div>
 
 </div>
-
+<script src="../../controllers/home/home.js"></script>
 </body>
 </html>
