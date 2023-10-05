@@ -71,8 +71,6 @@ function _generateRow(accountElement) {
                 tdPrice.textContent = res.editedAccountType.price + ' €';
                 updateBalance(res.data);
             });
-            
-
         })
 
         const deleteBtn = document.createElement('button')
